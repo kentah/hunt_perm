@@ -1,13 +1,25 @@
 {% extends 'main/baseMain.html' %}
 {% load staticfiles %}
 {% block content %}
-    <dir class='container'>
-      <h1>Huntington Ad Sales</h1>
-
-      <p>Huntington Ad Sales is an media company based just North of Chicago that
-        specializes in advertising sales and ther representation of television stations'
-        ad time (Cable, Digital, and Network).</p>
-
-    </dir>
+    <div class='container'>
+      <img src = "{% static "img/main/huntingtonBanner.png" %}" alt="Main Banner" />
+      <div class='row'>
+        <div class='col-sm-5 txtblk one'>
+          <p>
+            Huntington Ad Sales is a media company based just North of Chicago and we
+            specialize in advertising sales and the representation of television stations'
+            ad time (Cable, Digital, and Network).
+          </p>
+        </div>
+        <div class='col-sm-2'></div>
+        <div class='col-sm-5 txtblk two'>
+          <p>
+            Huntington Ad Sales is a media company based just North of Chicago and we
+            specialize in advertising sales and the representation of television stations'
+            ad time (Cable, Digital, and Network).
+          </p>
+        </div>
+      </div>
+    </div>
 
 {% endblock content %}
