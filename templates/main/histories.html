@@ -1,0 +1,14 @@
+{% extends 'main/baseMain.html' %}
+{% load staticfiles %}
+{% block content %}
+
+
+    <div class='container'>
+      Here go the histories. What have we done, how have we done it. Who with. Etc
+      {% for h in data %}
+        <h1>{{ h.title }}<h1>
+        <p>{{ h.description }}</p>
+      {% endfor %}
+    </div>
+
+{% endblock content %}

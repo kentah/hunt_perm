@@ -7,7 +7,7 @@
         </title>
         {% block stylesheets %}
             <link rel='stylesheet' type='text/css' href='{% static 'css/bootstrap.min.css' %}'>
-            <link rel='stylesheet' type='text/css' href='{% static 'css/main.css' %}'
+            <link rel='stylesheet' type='text/css' href='{% static 'css/main.css' %}'>
         {% endblock stylesheets %}
     </head>
     <body>
@@ -15,15 +15,15 @@
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="#">Huntington Ad Sales</a>
+        <a class="navbar-brand" href='{% url 'splash-page' %}'>Huntington Ad Sales</a>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
+              <a class="nav-link" href='{% url 'services-page' %}'>Services</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Histories</a>
+                <a class="nav-link" href='{% url 'histories-page' %}'>Histories</a>
             </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Blog</a>
