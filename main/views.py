@@ -1,6 +1,7 @@
-from django.shortcuts import render
 from django.http import HttpResponse
-from django.views.generic import View, TemplateView
+from django.shortcuts import get_object_or_404, render
+from django.template import loader
+from django.views.generic import View, TemplateView, ListView
 
 from .models import Services, Histories
 
@@ -13,24 +14,25 @@ class Splash(TemplateView):
         response = HttpResponse
         return response
 
-class Services(TemplateView):
+class Services(ListView):
 
+    model = Services
     template_name = '../templates/main/services.html'
-    data = Services.objects.all()
 
     def getServices(self, request, *args, **kwargs):
-        response = HttpResponse
-        return response
 
-class Histories(TemplateView):
+        data = Services.objects.all()
 
+        return render(request, template_name, {'services': data})
+
+class Histories(ListView):
+
+    model = Histories
     template_name = '../templates/main/histories.html'
 
-    data = Histories.objects.all()
-
-    his = {'history': data}
 
     def getHistories(self, request, *args, **kwargs):
-    #    response = HttpResponse
-    #    return response
-        return render(request, template_name, {'data': data})
+
+        data = Histories.objects.all()
+
+        return render(request, template_name, {'history': data})

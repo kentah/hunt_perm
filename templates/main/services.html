@@ -3,6 +3,12 @@
 {% block content %}
     <div class='container'>
       This is the "Services Page where we discuss the various things we do"
+      {% for s in object_list %}
+        <h1>{{ s.title }}</h1>
+        <ul>
+          <li>{{ s.description }}</li>
+        </ul>
+      {% endfor %}
     </div>
 
 {% endblock content %}
