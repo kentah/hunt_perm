@@ -1,0 +1,37 @@
+<!-- templates/email.html -->
+{% extends 'contact/baseContact.html' %}
+{% load staticfiles %}
+{% block title %}Contact Us{% endblock title %}
+{% block stylesheets %}
+    {{ block.super }}
+{% endblock stylesheets %}
+{% block content %}
+
+      <div class='container'>
+        <div class='row'>
+          <div class='col-6'>
+            <div class='d-flex flex-column display-2'>
+              <p>Have a question?</p>
+              <p>We have the answer!<p>
+            </div>
+            <div class='d-flex flex-column display-4' style='font-size:25;'>
+              <p>Huntington Ad Sales</p>
+              <p>990 Grove St.</p>
+              <p>Suite 501</p>
+              <p>Evanston, IL 60201</p>
+            </div>
+        </div>
+          <div class='col-6'>
+            <form method='POST'>
+                {% csrf_token %}
+            <div class='form-group'>
+              {{ form.as_p }}
+              <div class="form-actions">
+                <button type="submit">Send</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</form>
+{% endblock content %}

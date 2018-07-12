@@ -1,0 +1,19 @@
+{% extends 'blog/baseBlog.html' %}
+{% load staticfiles %}
+{% block title %}{% endblock title %}
+{% block stylesheets %}
+    {{ block.super }}
+{% endblock stylesheets %}
+{% block content %}
+  <div class='container'>
+    <div>
+      {% for p in posts %}
+      <p style='font-size:3em;'><b>{{ p.title }}</b></p>
+      <p style='font-size:0.75em;'>Created: {{ p.created }}</p>
+      <p style='font-size:0.75em;'>Modified: {{ p.modified }}<p>
+      <em><b>Catagorized under:</b> {{p.category}}</em>
+      <p style='font-size:1.75em;'> {{ p.body }}</p>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock content %}

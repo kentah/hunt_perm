@@ -26,7 +26,11 @@
                 <a class="nav-link" href='{% url 'histories-page' %}'>Histories</a>
             </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Blog</a>
+                <a class="nav-link" href='{% url 'stories-page' %}'>Stories</a>
+              </li>
+            </li>
+              <li class="nav-item">
+                <a class="nav-link" href='{% url 'contact' %}'>Contact Us</a>
               </li>
           </ul>
           <!--<form class="form-inline my-2 my-lg-0">
@@ -39,8 +43,10 @@
             {% block content %}
             {% endblock content %}
         </div>
+        {% block footer %}
         <footer>
-
+          Copyright Huntington Ad Sales 2018
         </footer>
+        {% endblock footer %}
     </body>
 </html>

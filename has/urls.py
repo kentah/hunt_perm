@@ -17,8 +17,11 @@ from django.contrib import admin
 from django.urls import path, include
 
 from main import views
+from blog import views
 
 urlpatterns = [
     path('', include('main.urls')),
+    path('', include('blog.urls')),
+    path('', include('contact.urls')),
     path('admin/', admin.site.urls),
 ]

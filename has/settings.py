@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'main',
     'blog',
     'logs',
+    'contact',
 ]
 
 MIDDLEWARE = [
@@ -128,3 +129,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
