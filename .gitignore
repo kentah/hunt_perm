@@ -1,0 +1,15 @@
+.DS_STORE
+._*
+.Trashes
+.env
+.Spotlight-V100
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
