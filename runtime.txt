@@ -1,1 +1,1 @@
-python-3.6.2rc1
+python-3.6.6
