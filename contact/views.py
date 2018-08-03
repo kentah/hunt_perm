@@ -27,4 +27,6 @@ def contactView(request):
     return render(request, template_name, {'form': form})
 
 def successView(request):
+    template_name = '../templates/contact/success.html'
+
     return HttpResponse('Success! Thank you for your message')

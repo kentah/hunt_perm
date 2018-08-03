@@ -16,9 +16,11 @@ class Splash(TemplateView):
 
 class Services(ListView):
 
+    # will not use model, hard-code services
     model = Services
     template_name = '../templates/main/services.html'
 
+    # will not use model, hard-code services
     def getServices(self, request, *args, **kwargs):
 
         data = Services.objects.all()
@@ -26,7 +28,7 @@ class Services(ListView):
         return render(request, template_name, {'services': data})
 
 class Histories(ListView):
-
+    # past clients etc
     model = Histories
     template_name = '../templates/main/histories.html'
 

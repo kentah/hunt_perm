@@ -1,0 +1,12 @@
+.service-list {
+    list-style-type: none;
+}
+
+.service-list-title {
+  font-size: 5em;
+}
+
+.service-list-item {
+  font-size: 2em;
+  text-indent: 4%;
+}

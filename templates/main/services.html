@@ -1,14 +1,30 @@
 {% extends 'main/baseMain.html' %}
 {% load staticfiles %}
+{% block stylesheets %}
+  {{ block.super }}
+  <link rel='stylesheet' type='text/css' href='{% static 'css/services.css' %}'>
+{% endblock stylesheets %}
 {% block content %}
-    <div class='container'>
-      This is the "Services Page where we discuss the various things we do"
-      {% for s in object_list %}
-        <h1>{{ s.title }}</h1>
-        <ul>
-          <li>{{ s.description }}</li>
-        </ul>
-      {% endfor %}
-    </div>
+<div class='container'>
+  <div class='text-left'>
+    <ul class='service-list'>
+      <li class='service-list-title'>
+        Huntington Ad Sales...
+      </li>
+      <li class='service-list-item'>
+        ...is an ad sales company.
+      </li>
+      <li class='service-list-item'>
+        ...represents stations' ad sales
+      </li>
+      <li class='service-list-item'>
+        ...is a media placement company
+      </li>
+      <li class='service-list-item'>
+        ...some text
+      </li>
+    </ul>
+  </div>
+</div>
 
 {% endblock content %}
