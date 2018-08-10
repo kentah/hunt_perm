@@ -8,11 +8,12 @@ from .forms import ContactForm
 
 def contactView(request):
     template_name = '../templates/contact/contact.html'
+    form_class = ContactForm
 
     if request.method == 'GET':
         form = ContactForm()
     else:
-        form = ContactForm(request.POST)
+        form = form_class(request.POST)
         if form.is_valid():
             subject = form.cleaned_data['subject']
             from_email = form.cleaned_data['from_email']
@@ -23,7 +24,7 @@ def contactView(request):
                 send_mail(subject, message, from_email, ['khoward@huntingtonadsales.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
-            return redirect('splash-page')
+            return redirect('success')
     return render(request, template_name, {'form': form})
 
 def successView(request):

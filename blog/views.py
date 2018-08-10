@@ -29,4 +29,13 @@ class Index(ListView):
 
         data = Post.objects.all()
 
-        return rendere(request, template_name, {'side': data})
+        return render(request, template_name, {'side': data})
+
+class Detail(ListView):
+    '''
+    def individualPost(self, request):
+        recentPost = Post.objects.get(id_exact=1)
+        p = f'{recentPost.title}:{recentPost.content}'
+        return render()
+    '''
+    pass

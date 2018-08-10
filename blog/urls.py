@@ -5,5 +5,5 @@ from blog import views
 
 urlpatterns = [
     path('stories', views.Feed.as_view(), name='stories-page'),
-    #path('<int:post_id>/', views.full, name='full'),
+    path(r'^stories/?P<slug>[\w]+])/$', views.Detail.as_view(), name='detail'),
 ]
